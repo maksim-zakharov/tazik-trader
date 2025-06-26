@@ -137,7 +137,7 @@ export class TradingService {
   }
 
   async processStock(ticker: string) {
-    const percent = this.lvl_1.includes(ticker) ? this.MAX_DIFF : this.MIN_DIFF;
+    const percent = this.lvl_1.includes(ticker) ? this.MIN_DIFF : this.MAX_DIFF;
     try {
       await this.alor.subscriptions.candles(
         {
